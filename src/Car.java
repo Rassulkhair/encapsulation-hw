@@ -33,18 +33,29 @@ public class Car {
     }
 
     public void accelerate(int increment) {
-        speed += increment;
+        if (increment > 0) {
+            speed += increment;
+            System.out.println("Автомобиль ускорился на " + increment + " км/ч.");
+        } else {
+            System.out.println("Значение ускорения должно быть положительным.");
+        }
     }
 
     public void brake(int decrement) {
-        speed -= decrement;
+        if (decrement > 0) {
+            speed -= decrement;
+            System.out.println("Автомобиль замедлился на " + decrement + " км/ч.");
+        } else {
+            System.out.println("Значение замедления должно быть положительным.");
+        }
+
     }
 
     public void printCarInfo() {
-        System.out.println("Make = " + getMake()
-                + "\nModel = " + getModel()
-                + "\nYear = " + getYear()
-                + "\nSpeed = " + getSpeed());
+        System.out.println("Марка: " + getMake()
+                + "\nМодель: " + getModel()
+                + "\nГод выпуска: " + getYear()
+                + "\nТекущая скорость: " + getSpeed());
         System.out.println("__________________________");
     }
 
