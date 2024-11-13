@@ -9,7 +9,13 @@ public class Car {
     }
 
     public void setMake(String make) {
-        this.make = make;
+        if (!make.isEmpty()) {
+            this.make = make;
+        } else {
+            System.out.println("Марка не может быть пустой.");
+            System.out.println();
+
+        }
     }
 
     public String getModel() {
@@ -25,7 +31,12 @@ public class Car {
     }
 
     public void setYear(int year) {
-        this.year = year;
+        if (year >= 2000) {
+            this.year = year;
+        } else {
+            System.out.println("Некорректный год выпуска.");
+            System.out.println();
+        }
     }
 
     public int getSpeed() {
@@ -36,8 +47,12 @@ public class Car {
         if (increment > 0) {
             speed += increment;
             System.out.println("Автомобиль ускорился на " + increment + " км/ч.");
+            System.out.println();
+
         } else {
             System.out.println("Значение ускорения должно быть положительным.");
+            System.out.println();
+
         }
     }
 
@@ -45,8 +60,12 @@ public class Car {
         if (decrement > 0) {
             speed -= decrement;
             System.out.println("Автомобиль замедлился на " + decrement + " км/ч.");
+            System.out.println();
+
         } else {
             System.out.println("Значение замедления должно быть положительным.");
+            System.out.println();
+
         }
 
     }
