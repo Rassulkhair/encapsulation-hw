@@ -33,11 +33,11 @@ public class Car {
     }
 
     public void accelerate(int increment) {
-
+        speed += increment;
     }
 
     public void brake(int decrement) {
-
+        speed -= decrement;
     }
 
     public void printCarInfo() {
